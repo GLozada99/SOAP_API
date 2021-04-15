@@ -3,7 +3,6 @@ import json
 class Client():
     def __init__(self,endpoint='http://localhost:7000/api/estudiante/'):
         self.endpoint = endpoint
-        self.params = dict()
     
     def findAll(self):
         req = requests.get(url = self.endpoint)
