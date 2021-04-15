@@ -1,3 +1,5 @@
+import requests
+
 class Client():
     def __init__(self,endpoint='http://localhost:7000/api/estudiante/'):
         self.endpoint = endpoint
