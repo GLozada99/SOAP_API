@@ -21,6 +21,6 @@ class Client():
 
     def insert(self,id,name,major):
         data = {'matricula': id, 'nombre': name, 'carrera': major}
-        req = requests.post(url = self.endpoint, data = data)
+        req = requests.post(url = self.endpoint+'/', data = data)
         
 
