@@ -12,7 +12,7 @@ elif len(sys.argv) == 3:
         cli.find(id)
     elif sys.argv[1] == 'delete':
         cli.delete(id)
-elif len(sys.argv) == 5:
+elif len(sys.argv) == 5 and sys.argv[1] == 'insert':
     id = sys.argv[2]
     name = sys.argv[3]
     major = sys.argv[4]
