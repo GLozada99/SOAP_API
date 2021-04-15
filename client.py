@@ -16,11 +16,11 @@ class Client():
         print(data)
 
     def delete(self,id):
-        req = requests.delete(url = self.endpoint, data = {'matricula': id})
+        req = requests.delete(url = self.endpoint+'/'+id, data = {'matricula': id})
         
 
     def insert(self,id,name,major):
         data = {'matricula': id, 'nombre': name, 'carrera': major}
-        req = requests.post(url = self.endpoint+'/', data = data)
+        req = requests.post(url = self.endpoint, data = data)
         
 
