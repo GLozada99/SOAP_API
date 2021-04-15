@@ -6,20 +6,20 @@ class Client():
         self.params = dict()
     
     def findAll(self):
-        req = requests.get(url = self.endpoint, params = self.params)
+        req = requests.get(url = self.endpoint)
         data = req.json()
         print(data)
-        pass
 
     def find(self,id):
-        req = requests.get(url = self.endpoint+'/'+id, params = self.params)
+        req = requests.get(url = self.endpoint+'/'+id)
         data = req.json()
         print(data)
-        pass
 
     def delete(self,id):
         pass
 
     def insert(self,id,name,major):
+        data = {'matricula': id, 'nombre': name, 'carrera': major}
+        req = requests.post(url = self.endpoint, data = data)
         pass
 
