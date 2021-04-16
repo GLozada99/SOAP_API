@@ -1,8 +1,11 @@
 import requests
 import json
+from suds.client import Client as CLI
+
 class Client():
-    def __init__(self,endpoint='http://localhost:7000/api/estudiante/'):
+    def __init__(self,endpoint='http://localhost:7000/ws/EstudianteWebServices?wsdl'):
         self.endpoint = endpoint
+        self.cli = CLI(self.endpoint)
     
     def findAll(self):
         req = requests.get(url = self.endpoint)
